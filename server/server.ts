@@ -11,6 +11,9 @@ import rolRoutes from "../modules/auth/routers/rol.routes";
 import usuarioRoutes from "../modules/auth/routers/usuario.routes";
 import vehiculoRoutes from "../modules/auth/routers/vehiculo.routes";
 import targetaRoutes from "../modules/auth/routers/targeta.routes";
+import tallerRoutes from "../modules/jobs/routers/taller.routes";
+import tecnicosRoutes from "../modules/jobs/routers/tecnicos.routes";
+import servicioRoutes from "../modules/jobs/routers/servicio.routes";
 
 export class Server {
     private app: Application;
@@ -22,8 +25,9 @@ export class Server {
         usuario: "/api/usuario",
         vehiculo: "/api/vehiculo",
         targeta: "/api/targeta",
-        // imagen: "/api/imagen",
-        // pertenencia: "/api/pertenencia",
+        taller: "/api/taller",
+        tecnicos: "/api/tecnicos",
+        servicio: "/api/servicio",
     };
 
     constructor() {
@@ -64,8 +68,9 @@ export class Server {
         this.app.use(this.apiPaths.usuario, usuarioRoutes);
         this.app.use(this.apiPaths.vehiculo, vehiculoRoutes);
         this.app.use(this.apiPaths.targeta, targetaRoutes);
-        // this.app.use(this.apiPaths.imagen, imagenRoutes);
-        // this.app.use(this.apiPaths.pertenencia, pertenenciaRoutes);
+        this.app.use(this.apiPaths.taller, tallerRoutes);
+        this.app.use(this.apiPaths.tecnicos, tecnicosRoutes);
+        this.app.use(this.apiPaths.servicio, servicioRoutes);
     }
 
     listen() {
