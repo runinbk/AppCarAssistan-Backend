@@ -26,6 +26,8 @@ const targeta_routes_1 = __importDefault(require("../modules/auth/routers/target
 const taller_routes_1 = __importDefault(require("../modules/jobs/routers/taller.routes"));
 const tecnicos_routes_1 = __importDefault(require("../modules/jobs/routers/tecnicos.routes"));
 const servicio_routes_1 = __importDefault(require("../modules/jobs/routers/servicio.routes"));
+const asistencia_routes_1 = __importDefault(require("../modules/services/routers/asistencia.routes"));
+const img_routes_1 = __importDefault(require("../modules/services/routers/img.routes"));
 class Server {
     constructor() {
         this.apiPaths = {
@@ -37,6 +39,8 @@ class Server {
             taller: "/api/taller",
             tecnicos: "/api/tecnicos",
             servicio: "/api/servicio",
+            asistencia: "/api/asistencia",
+            img: "/api/img",
         };
         this.app = (0, express_1.default)();
         this.port = config_1.default.PORT || "8000";
@@ -74,6 +78,8 @@ class Server {
         this.app.use(this.apiPaths.taller, taller_routes_1.default);
         this.app.use(this.apiPaths.tecnicos, tecnicos_routes_1.default);
         this.app.use(this.apiPaths.servicio, servicio_routes_1.default);
+        this.app.use(this.apiPaths.asistencia, asistencia_routes_1.default);
+        this.app.use(this.apiPaths.img, img_routes_1.default);
     }
     listen() {
         this.app.listen(this.port, () => {

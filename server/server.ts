@@ -14,6 +14,8 @@ import targetaRoutes from "../modules/auth/routers/targeta.routes";
 import tallerRoutes from "../modules/jobs/routers/taller.routes";
 import tecnicosRoutes from "../modules/jobs/routers/tecnicos.routes";
 import servicioRoutes from "../modules/jobs/routers/servicio.routes";
+import asistenciaRoutes from "../modules/services/routers/asistencia.routes";
+import imgRoutes from "../modules/services/routers/img.routes";
 
 export class Server {
     private app: Application;
@@ -28,6 +30,8 @@ export class Server {
         taller: "/api/taller",
         tecnicos: "/api/tecnicos",
         servicio: "/api/servicio",
+        asistencia: "/api/asistencia",
+        img: "/api/img",
     };
 
     constructor() {
@@ -71,6 +75,8 @@ export class Server {
         this.app.use(this.apiPaths.taller, tallerRoutes);
         this.app.use(this.apiPaths.tecnicos, tecnicosRoutes);
         this.app.use(this.apiPaths.servicio, servicioRoutes);
+        this.app.use(this.apiPaths.asistencia, asistenciaRoutes);
+        this.app.use(this.apiPaths.img, imgRoutes);
     }
 
     listen() {
