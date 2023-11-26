@@ -10,13 +10,15 @@ const config = {
 
     FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:8080',
 
-    DB_CONNECTION: process.env.DB_CONNECTION || 'postgres',
-    DB_HOST: process.env.DB_HOST || 'localhost',
-    DB_PORT: process.env.DB_PORT || '5432',
-    DB_DATABASE: process.env.DB_DATABASE || 'AppCarAssistan-DB',
-    DB_USERNAME: process.env.DB_USERNAME || 'postgres',
+    DB_CONNECTION: process.env.DB_CONNECTION,
+    DB_HOST: process.env.DB_HOST,
+    DB_PORT: process.env.DB_PORT,
+    DB_DATABASE: process.env.DB_DATABASE,
+    DB_USERNAME: process.env.DB_USERNAME,
 
-    DB_PASSWORD: process.env.DB_PASSWORD || 'password',
+    DB_PASSWORD: process.env.DB_PASSWORD,
+
+    DATABASE_URL: process.env.DATABASE_URL,
 
     //mi password
     // DB_PASSWORD: process.env.DB_PASSWORD || 'HolaMundo123',

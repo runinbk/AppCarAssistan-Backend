@@ -5,21 +5,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const config_1 = __importDefault(require("../server/config"));
-const user = config_1.default.DB_USERNAME || 'jwyjpayxggfxea';
-const password = config_1.default.DB_PASSWORD || 'e2915dc6f998be73d3a1c40b7a4857a2a556162504017ad26c2881b819b4e0d1';
-const host = config_1.default.DB_HOST || 'ec2-3-218-172-130.compute-1.amazonaws.com';
+const user = config_1.default.DB_USERNAME || 'ajjvjwhvkxvkcb';
+const password = config_1.default.DB_PASSWORD || '6b960eb7a069a09d0924fd5343c3fe985c2f6dc08b3466c5c4633cfac6222484';
+const host = config_1.default.DB_HOST || 'ec2-44-213-228-107.compute-1.amazonaws.com';
 const port = config_1.default.DB_PORT || 5432;
-const database = config_1.default.DB_DATABASE || 'd7adg1n2jf2rqt';
+const database = config_1.default.DB_DATABASE || 'd1rdg8s7hn1n8k';
 const typeDatabase = config_1.default.DB_CONNECTION || 'postgres';
 const url = `${typeDatabase}://${user}:${password}@${host}:${port}/${database}`;
-console.log(url);
+// const url = config.DATABASE_URL || "";
+// console.log(url);
 const options = {
     dialect: 'postgres',
     logging: false,
     dialectOptions: {
-    // ssl: {
-    //     rejectUnauthorized: false
-    // }
+        ssl: {
+            rejectUnauthorized: false
+        }
     }
 };
 const sequelizeConnection = new sequelize_1.Sequelize(url, options);
