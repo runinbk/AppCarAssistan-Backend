@@ -8,7 +8,7 @@ class Usuario extends Model {
     public correo!: string;
     public password!: string;
     public fecha_nac!: Date;
-    public celular!: number;
+    public calular!: number;
     public img!: string;
     public state!: boolean;
     public id_rol!: number; // Llave foránea
@@ -43,7 +43,7 @@ Usuario.init(
         fecha_nac: {
             type: DataTypes.DATE,
         },
-        celular: {
+        calular: {
             type: DataTypes.INTEGER,
         },
         state: {

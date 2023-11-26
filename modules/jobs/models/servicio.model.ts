@@ -31,7 +31,7 @@ Servicio.init(
         servicio: {
             type: DataTypes.STRING,
         },
-        decripcion: {
+        descripcion: {
             type: DataTypes.STRING,
         },
         state: {

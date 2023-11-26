@@ -34,7 +34,7 @@ Usuario.init({
     fecha_nac: {
         type: sequelize_1.DataTypes.DATE,
     },
-    celular: {
+    calular: {
         type: sequelize_1.DataTypes.INTEGER,
     },
     state: {

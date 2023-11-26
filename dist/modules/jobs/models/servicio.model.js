@@ -25,7 +25,7 @@ Servicio.init({
     servicio: {
         type: sequelize_1.DataTypes.STRING,
     },
-    decripcion: {
+    descripcion: {
         type: sequelize_1.DataTypes.STRING,
     },
     state: {
