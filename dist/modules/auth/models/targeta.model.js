@@ -20,7 +20,7 @@ Targeta.init({
         autoIncrement: true,
     },
     numero: {
-        type: sequelize_1.DataTypes.INTEGER,
+        type: sequelize_1.DataTypes.STRING,
     },
     fecha_ven: {
         type: sequelize_1.DataTypes.DATE,

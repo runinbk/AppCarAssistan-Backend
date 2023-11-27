@@ -4,7 +4,7 @@ import Usuario from "./usuario.model";
 
 class Targeta extends Model {
     public id!: number;
-    public numero!: number;
+    public numero!: string;
     public fecha_ven!: Date;
     public cvs!: string;
     public state!: boolean;
@@ -26,7 +26,7 @@ Targeta.init(
             autoIncrement: true,
         },
         numero: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
         },
         fecha_ven: {
             type: DataTypes.DATE,
