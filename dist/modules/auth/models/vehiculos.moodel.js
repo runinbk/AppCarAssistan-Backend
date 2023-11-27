@@ -32,7 +32,7 @@ Vehiculo.init({
         type: sequelize_1.DataTypes.STRING,
     },
     anio: {
-        type: sequelize_1.DataTypes.DATE,
+        type: sequelize_1.DataTypes.INTEGER,
     },
     color: {
         type: sequelize_1.DataTypes.INTEGER,

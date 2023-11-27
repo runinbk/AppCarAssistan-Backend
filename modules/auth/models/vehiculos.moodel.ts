@@ -5,7 +5,7 @@ import Usuario from "./usuario.model";
 class Vehiculo extends Model {
     public id!: number;
     public placa!: string;
-    public anio!: Date;
+    public anio!: number;
     public modelo!: string;
     public marca!: string;
     public color!: string;
@@ -41,7 +41,7 @@ Vehiculo.init(
             type: DataTypes.STRING,
         },
         anio: {
-            type: DataTypes.DATE,
+            type: DataTypes.INTEGER,
         },
         color: {
             type: DataTypes.INTEGER,
