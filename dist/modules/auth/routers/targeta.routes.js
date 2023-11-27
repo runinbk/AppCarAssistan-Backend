@@ -24,8 +24,9 @@ router.get('/:id', [
 router.post('/', [
     validar_jwt_1.default,
     // isAdminRole,
-    (0, express_validator_1.check)('rol', 'El rol es obligatorio').not().isEmpty(),
-    (0, express_validator_1.check)('descripcion', 'La descripcion es obligatoria').not().isEmpty(),
+    (0, express_validator_1.check)('numero', 'El numero es obligatorio').not().isEmpty(),
+    (0, express_validator_1.check)('fecha_ven', 'La fecha_ven es obligatoria').not().isEmpty(),
+    (0, express_validator_1.check)('cvs', 'El cvs es obligatorio').not().isEmpty(),
     validar_campos_1.default
 ], vehiculo_controller_1.post);
 router.put('/:id', [

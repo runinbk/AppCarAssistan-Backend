@@ -24,8 +24,8 @@ router.get('/:id', [
 router.post('/', [
     validar_jwt_1.default,
     // isAdminRole,
-    (0, express_validator_1.check)('rol', 'El rol es obligatorio').not().isEmpty(),
-    (0, express_validator_1.check)('descripcion', 'La descripcion es obligatoria').not().isEmpty(),
+    (0, express_validator_1.check)('nombre', 'El nombre del taller es obligatorio').not().isEmpty(),
+    (0, express_validator_1.check)('ubicacion', 'La ubicacion es obligatoria').not().isEmpty(),
     validar_campos_1.default
 ], taller_controller_1.post);
 router.put('/:id', [

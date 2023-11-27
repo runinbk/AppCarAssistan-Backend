@@ -23,9 +23,6 @@ router.get('/:id', [
 ], tecnicos_controller_1.get);
 router.post('/', [
     validar_jwt_1.default,
-    // isAdminRole,
-    (0, express_validator_1.check)('rol', 'El rol es obligatorio').not().isEmpty(),
-    (0, express_validator_1.check)('descripcion', 'La descripcion es obligatoria').not().isEmpty(),
     validar_campos_1.default
 ], tecnicos_controller_1.post);
 router.put('/:id', [

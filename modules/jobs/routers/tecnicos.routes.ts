@@ -31,9 +31,6 @@ router.get('/:id', [
 
 router.post('/', [
     validarJWT,
-    // isAdminRole,
-    check('rol', 'El rol es obligatorio').not().isEmpty(),
-    check('descripcion', 'La descripcion es obligatoria').not().isEmpty(),
     validarCampos
 ], post);
 
