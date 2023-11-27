@@ -2,13 +2,12 @@ import { Options, Sequelize } from "sequelize";
 
 import config from "../server/config";
 
-const user = config.DB_USERNAME || 'ajjvjwhvkxvkcb';
-const password = config.DB_PASSWORD || '6b960eb7a069a09d0924fd5343c3fe985c2f6dc08b3466c5c4633cfac6222484';
-const host = config.DB_HOST || 'ec2-44-213-228-107.compute-1.amazonaws.com';
+const user = config.DB_USERNAME || 'fqzyzgovpsyizh';
+const password = config.DB_PASSWORD || '453d5cc51dbd6425b329e2c9366d29d4cc5641e93aac4be42d67e5e3eedcf973';
+const host = config.DB_HOST || 'ec2-35-169-9-79.compute-1.amazonaws.com';
 const port = config.DB_PORT || 5432;
-const database = config.DB_DATABASE || 'd1rdg8s7hn1n8k';
+const database = config.DB_DATABASE || 'dc1jv30sgre0s8';
 const typeDatabase = config.DB_CONNECTION || 'postgres';
-
 
 const url = `${typeDatabase}://${user}:${password}@${host}:${port}/${database}`;
 // const url = config.DATABASE_URL || "";

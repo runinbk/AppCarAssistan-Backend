@@ -5,18 +5,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const config_1 = __importDefault(require("../server/config"));
-const user = config_1.default.DB_USERNAME || 'ajjvjwhvkxvkcb';
-const password = config_1.default.DB_PASSWORD || '6b960eb7a069a09d0924fd5343c3fe985c2f6dc08b3466c5c4633cfac6222484';
-const host = config_1.default.DB_HOST || 'ec2-44-213-228-107.compute-1.amazonaws.com';
+const user = config_1.default.DB_USERNAME || 'fqzyzgovpsyizh';
+const password = config_1.default.DB_PASSWORD || '453d5cc51dbd6425b329e2c9366d29d4cc5641e93aac4be42d67e5e3eedcf973';
+const host = config_1.default.DB_HOST || 'ec2-35-169-9-79.compute-1.amazonaws.com';
 const port = config_1.default.DB_PORT || 5432;
-const database = config_1.default.DB_DATABASE || 'd1rdg8s7hn1n8k';
+const database = config_1.default.DB_DATABASE || 'dc1jv30sgre0s8';
 const typeDatabase = config_1.default.DB_CONNECTION || 'postgres';
 const url = `${typeDatabase}://${user}:${password}@${host}:${port}/${database}`;
 // const url = config.DATABASE_URL || "";
 // console.log(url);
 const options = {
-    dialect: 'postgres', // 'mysql' | 'sqlite' | 'postgres' | 'mariadb' | 'mssql'
-    logging: false, // false
+    dialect: 'postgres',
+    logging: false,
     dialectOptions: {
         ssl: {
             rejectUnauthorized: false

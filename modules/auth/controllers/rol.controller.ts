@@ -3,6 +3,7 @@ import Rol from "../models/rol.model";
 
 export const gets = async (req: Request, res: Response) => {
     const obj = await Rol.findAll();
+
     res.json({ obj })
 }
 
