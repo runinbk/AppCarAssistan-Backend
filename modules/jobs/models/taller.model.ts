@@ -5,7 +5,7 @@ import Usuario from "../../auth/models/usuario.model";
 class Taller extends Model {
     public id!: number;
     public nombre!: string;
-    public ubicacion!: { type: any, allowNull: false, defaultValue: any };
+    public ubicacion!: string;
     public state!: boolean;
     public id_usuario!: number; // Llave foránea
 
@@ -28,9 +28,7 @@ Taller.init(
             type: DataTypes.STRING,
         },
         ubicacion: {
-            type: DataTypes.GEOMETRY('POINT'),
-            allowNull: false,
-            defaultValue: Sequelize.fn('POINT', 0, 0),
+            type: DataTypes.STRING
         },
         state: {
             type: DataTypes.BOOLEAN,
