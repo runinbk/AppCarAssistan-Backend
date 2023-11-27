@@ -18,7 +18,7 @@ const cors_1 = __importDefault(require("cors"));
 const bodyParser = require('body-parser');
 const config_1 = __importDefault(require("./config"));
 const connection_1 = __importDefault(require("../database/connection"));
-// import authRoutes from "../routes/auth.routes";
+const auth_routes_1 = __importDefault(require("../modules/auth/routers/auth.routes"));
 const rol_routes_1 = __importDefault(require("../modules/auth/routers/rol.routes"));
 const usuario_routes_1 = __importDefault(require("../modules/auth/routers/usuario.routes"));
 const vehiculo_routes_1 = __importDefault(require("../modules/auth/routers/vehiculo.routes"));
@@ -31,7 +31,7 @@ const img_routes_1 = __importDefault(require("../modules/services/routers/img.ro
 class Server {
     constructor() {
         this.apiPaths = {
-            // auth: "/api/auth",
+            auth: "/api/auth",
             rol: "/api/rol",
             usuario: "/api/usuario",
             vehiculo: "/api/vehiculo",
@@ -70,7 +70,7 @@ class Server {
         this.app.use(bodyParser.json());
     }
     routes() {
-        // this.app.use(this.apiPaths.auth, authRoutes);
+        this.app.use(this.apiPaths.auth, auth_routes_1.default);
         this.app.use(this.apiPaths.rol, rol_routes_1.default);
         this.app.use(this.apiPaths.usuario, usuario_routes_1.default);
         this.app.use(this.apiPaths.vehiculo, vehiculo_routes_1.default);

@@ -6,7 +6,7 @@ import config from "./config";
 
 import db from "../database/connection";
 
-// import authRoutes from "../routes/auth.routes";
+import authRoutes from "../modules/auth/routers/auth.routes";
 import rolRoutes from "../modules/auth/routers/rol.routes";
 import usuarioRoutes from "../modules/auth/routers/usuario.routes";
 import vehiculoRoutes from "../modules/auth/routers/vehiculo.routes";
@@ -22,7 +22,7 @@ export class Server {
     private port: string | number | undefined;
 
     private apiPaths = {
-        // auth: "/api/auth",
+        auth: "/api/auth",
         rol: "/api/rol",
         usuario: "/api/usuario",
         vehiculo: "/api/vehiculo",
@@ -67,7 +67,7 @@ export class Server {
     }
 
     routes() {
-        // this.app.use(this.apiPaths.auth, authRoutes);
+        this.app.use(this.apiPaths.auth, authRoutes);
         this.app.use(this.apiPaths.rol, rolRoutes);
         this.app.use(this.apiPaths.usuario, usuarioRoutes);
         this.app.use(this.apiPaths.vehiculo, vehiculoRoutes);
