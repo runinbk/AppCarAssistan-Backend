@@ -31,11 +31,8 @@ router.get('/:id', [
 
 router.post('/', [
     validarJWT,
+
     // isAdminRole,
-    check('placa', 'La placa es obligatoria').not().isEmpty(),
-    check('anio', 'El anio(año) es obligatorio').not().isEmpty(),
-    check('modelo', 'El modelo es obligatorio').not().isEmpty(),
-    check('color', 'El color es obligatorio').not().isEmpty(),
     validarCampos
 ], post);
 
@@ -48,16 +45,16 @@ router.put('/:id', [
 
 router.delete('/del/:id', [
     check('id').isInt().withMessage('El campo id debe ser un número entero'),
-    // validarJWT,
+    validarJWT,
     // isAdminRole,
-    // validarCampos
+    validarCampos
 ], delet);
 
 router.delete('/:id', [
     check('id').isInt().withMessage('El campo id debe ser un número entero'),
-    // validarJWT,
+    validarJWT,
     // isAdminRole,
-    // validarCampos
+    validarCampos
 ], deletState);
 
 export default router;

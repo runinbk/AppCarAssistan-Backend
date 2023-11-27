@@ -24,10 +24,6 @@ router.get('/:id', [
 router.post('/', [
     validar_jwt_1.default,
     // isAdminRole,
-    (0, express_validator_1.check)('placa', 'La placa es obligatoria').not().isEmpty(),
-    (0, express_validator_1.check)('anio', 'El anio(año) es obligatorio').not().isEmpty(),
-    (0, express_validator_1.check)('modelo', 'El modelo es obligatorio').not().isEmpty(),
-    (0, express_validator_1.check)('color', 'El color es obligatorio').not().isEmpty(),
     validar_campos_1.default
 ], vehiculo_controller_1.post);
 router.put('/:id', [
@@ -38,15 +34,15 @@ router.put('/:id', [
 ], vehiculo_controller_1.put);
 router.delete('/del/:id', [
     (0, express_validator_1.check)('id').isInt().withMessage('El campo id debe ser un número entero'),
-    // validarJWT,
+    validar_jwt_1.default,
     // isAdminRole,
-    // validarCampos
+    validar_campos_1.default
 ], vehiculo_controller_1.delet);
 router.delete('/:id', [
     (0, express_validator_1.check)('id').isInt().withMessage('El campo id debe ser un número entero'),
-    // validarJWT,
+    validar_jwt_1.default,
     // isAdminRole,
-    // validarCampos
+    validar_campos_1.default
 ], vehiculo_controller_1.deletState);
 exports.default = router;
 //# sourceMappingURL=vehiculo.routes.js.map
