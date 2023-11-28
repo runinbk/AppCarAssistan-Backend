@@ -11,7 +11,7 @@ class Asistencia extends Model {
     public id_taller!: number; // Llave foránea
     public id_servicio!: number; // Llave foránea
     public id_tecnico!: number; // Llave foránea
-    public ubicacion!: { type: any, allowNull: false, defaultValue: any };
+    public ubicacion!: string;
     public str_ruta!: string;
     public costo!: number;
     public pago_targeta!: boolean;
@@ -43,9 +43,7 @@ Asistencia.init(
             type: DataTypes.STRING,
         },
         ubicacion: {
-            type: DataTypes.GEOMETRY('POINT'),
-            allowNull: false,
-            defaultValue: Sequelize.fn('POINT', 0, 0),
+            type: DataTypes.STRING,
         },
         state_verif: {
             type: DataTypes.BOOLEAN,

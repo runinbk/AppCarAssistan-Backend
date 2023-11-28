@@ -32,9 +32,7 @@ Asistencia.init({
         type: sequelize_1.DataTypes.STRING,
     },
     ubicacion: {
-        type: sequelize_1.DataTypes.GEOMETRY('POINT'),
-        allowNull: false,
-        defaultValue: sequelize_1.Sequelize.fn('POINT', 0, 0),
+        type: sequelize_1.DataTypes.STRING,
     },
     state_verif: {
         type: sequelize_1.DataTypes.BOOLEAN,
