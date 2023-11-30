@@ -55,6 +55,9 @@ Asistencia.init(
         state: {
             type: DataTypes.BOOLEAN,
         },
+        pago: {
+            type: DataTypes.BOOLEAN,
+        },
         id_usuario: {
             type: DataTypes.INTEGER,
             references: {

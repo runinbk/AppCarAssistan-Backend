@@ -43,6 +43,9 @@ Asistencia.init({
     state: {
         type: sequelize_1.DataTypes.BOOLEAN,
     },
+    pago: {
+        type: sequelize_1.DataTypes.BOOLEAN,
+    },
     id_usuario: {
         type: sequelize_1.DataTypes.INTEGER,
         references: {
