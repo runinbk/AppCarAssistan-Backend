@@ -17,20 +17,20 @@ import validarJWT from "../../../middlewares/validar-jwt";
 const router = Router();
 
 router.get('/', [
-    validarJWT,
+    // validarJWT,
     //  isAdminRole,
     validarCampos
 ], gets);
 
 router.get('/:id', [
     check('id').isInt().withMessage('El campo id debe ser un número entero'),
-    validarJWT,
+    // validarJWT,
     // isAdminRole,
     validarCampos
 ], get);
 
 router.post('/', [
-    validarJWT,
+    // validarJWT,
     // isAdminRole,
     check('rol', 'El rol es obligatorio').not().isEmpty(),
     check('descripcion', 'La descripcion es obligatoria').not().isEmpty(),
@@ -39,7 +39,7 @@ router.post('/', [
 
 router.put('/:id', [
     check('id').isInt().withMessage('El campo id debe ser un número entero'),
-    validarJWT,
+    // validarJWT,
     // isAdminRole,
     validarCampos
 ], put);
