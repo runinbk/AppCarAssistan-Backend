@@ -17,6 +17,7 @@ class Asistencia extends Model {
     public pago_targeta!: boolean;
     public state_verif!: boolean;
     public state!: boolean;
+    public pago!: boolean;
 
     // Otras propiedades del modelo...
 

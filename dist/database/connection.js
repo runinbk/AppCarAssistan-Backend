@@ -15,8 +15,8 @@ const url = `${typeDatabase}://${user}:${password}@${host}:${port}/${database}`;
 // const url = config.DATABASE_URL || "";
 // console.log(url);
 const options = {
-    dialect: 'postgres',
-    logging: false,
+    dialect: 'postgres', // 'mysql' | 'sqlite' | 'postgres' | 'mariadb' | 'mssql'
+    logging: false, // false
     dialectOptions: {
         ssl: {
             rejectUnauthorized: false
